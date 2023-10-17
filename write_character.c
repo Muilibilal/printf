@@ -11,6 +11,6 @@
 
 void write_character(char c, int *count)
 {
-        write(1, &c, 1);
-        (*count)++;
+	write(1, &c, 1);
+	(*count)++;
 }
