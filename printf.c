@@ -4,10 +4,10 @@
 /**
  * _printf - This is a function used to print a formatted output
  *
- * @format: A character string
+ * @format: The format in which the argument will be printed
  * @...: Other arguments
  *
- * Return: 0 success
+ * Return: no. of characters
  */
 
 int _printf(const char *format, ...)
@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 
 	int printed_chars = 0;
 
-	if (format == NULL)
+	if (*format == NULL)
 		return (1);
 
 	va_start(argument_lists, format);
