@@ -1,7 +1,4 @@
 #include "main.h"
-#include <limits.h>
-#include <stdio.h>
-
 
 /**
  * write_character - function to write character when format specifies c
