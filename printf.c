@@ -9,7 +9,7 @@
  * Return: 0 success
  */
 
-static void write_character(char c, int *count)
+void write_character(char c, int *count)
 {
 	write(1, &c, 1);
 	(*count)++;
@@ -24,7 +24,7 @@ static void write_character(char c, int *count)
  * Return: 0 success
  */
 
-static void write_string(const char *str, int *count)
+void write_string(const char *str, int *count)
 {
 	int string_length = 0;
 
@@ -43,7 +43,7 @@ static void write_string(const char *str, int *count)
  * @p_chrs: the count of the printed characters
  */
 
-static void fmt_spec_handler(const char **fmt, va_list *arg_lst, int *p_chrs)
+void fmt_spec_handler(const char **fmt, va_list *arg_lst, int *p_chrs)
 {
 		(*fmt)++;
 		if (**fmt == '\0')
