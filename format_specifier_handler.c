@@ -29,5 +29,15 @@ void fmt_spec_handler(const char **fmt, va_list *arg_lst, int *p_chrs)
 
 			write_string(string, p_chrs);
 		}
+
+		else if (**fmt == 'd' || **fmt == 'i')
+		{
+			int number = va_arg(*arg_lst, int);
+			char number_of_chars_in_str[20];
+
+			integer_to_string_converter(number, number_of_chars_in_str);
+			write(1, number_of_chars_in_str, strlen(number_of_chars_in_str));
+			(*p_chrs) += strlen(number_of_chars_in_str);
+		}
 	}
 }
